@@ -4,7 +4,7 @@ import { Route, Link, Switch } from 'react-router-dom';
 import Form from './Form';
 import schema from './validation/formSchema';
 import * as yup from 'yup';
-
+import axios from 'axios';
 const StyledApp = styled.div`
 display:flex;
 align-items:center;
@@ -61,7 +61,7 @@ const initialFormValues = {
   const initialFormErrors = {
     name: '',
     size: '',
-    sauce: '',
+     sauce: '',
 
   }
   const initialDisabled = true
@@ -73,8 +73,18 @@ const OrderPizza = () => {
   const [formErrors, setFormErrors] = useState(initialFormErrors) // object
   const [disabled, setDisabled] = useState(initialDisabled)    
 
-  const postNewOrder = newOrder => {
 
+  const getOrders = () =>{
+      axios.get('https://reqres.in/api/orders')
+        .then(res => {
+            console.log(res);
+        }).catch(err => console.error(err))
+  }
+  const postNewOrder = newOrder => {
+    axios.post('https://reqres.in/api/orders', newOrder)
+        .then(res => {
+            console.log(res)
+        }).catch(err => console.error(err))
     setFormValues(initialFormValues);
   }
   const validate = (name, value) => {
@@ -103,8 +113,12 @@ const OrderPizza = () => {
     const newOrder = {
       name: formValues.name,
       size: formValues.size,
-      toppings: ['pepperoni', 'sausage', 'mushrooms','bacon'].filter(topping => !!formValues[topping]),
-      special: formValues.special
+      special: formValues.special,
+      pepperoni: formValues.pepperoni,
+      sausage: formValues.sausage,
+      mushrooms: formValues.mushrooms,
+      bacon: formValues.bacon
+
 
       // 🔥 STEP 7- WHAT ABOUT HOBBIES?
     }

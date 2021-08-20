@@ -5,7 +5,7 @@ describe('Form App',()=>{
 
   const nameInput = () => cy.get('input[name=name]')
   const specialInput =() => cy.get('input[name=special]')
-  const sauceInput = () => cy.get('input [name =sauce]')
+  // const sauceInput = () => cy.get('input [name =sauce]')
   const submitBtn = () => cy.get('button[id="submit"]')
 
   it('Sanity check to make sure that tests work', () => {
