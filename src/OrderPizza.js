@@ -85,7 +85,7 @@ const OrderPizza = () => {
   const postNewOrder = newOrder => {
     axios.post('https://reqres.in/api/orders', newOrder)
         .then(res => {
-            console.log(res)
+            console.log(res.data)
         }).catch(err => console.error(err))
     setFormValues(initialFormValues);
   }
@@ -125,8 +125,7 @@ const OrderPizza = () => {
       // 🔥 STEP 7- WHAT ABOUT HOBBIES?
     }
     postNewOrder(newOrder);
- 
-    console.log(newOrder);
+
     // 🔥 STEP 8- POST NEW FRIEND USING HELPER
 
   }
