@@ -41,12 +41,13 @@ export default function Form(props){
                         type = 'text'
                     />
                 </label>
-                <label>Size:
+                <label>Size:&nbsp;
                     <select id ='size-dropdown'
                         onChange={onChange}
                         value = {values.size}
                         name = 'size'
                     >
+                        <option value =''>Pick a size</option>
                         <option value ='Large'>Large</option>
                         <option value = 'Medium'>Medium</option>
                         <option value = 'Small'>Small</option>
@@ -109,8 +110,8 @@ export default function Form(props){
                 </label>
             </div>
             <div className='form-group inputs'>
-                <label>Special Instructions
-                    <input
+                <label>Special Instructions:&nbsp;
+                    <input id = 'special-text'
                         value={values.special}
                         onChange={onChange}
                         name='special'
@@ -119,8 +120,8 @@ export default function Form(props){
                 </label>
             </div>
 
-            <div class = 'submit'>
-                <button disabled={disabled}>Submit order</button>
+            <div >
+                <button  id = 'submit'disabled={disabled}>Submit order</button>
             </div>
         </form>
     )

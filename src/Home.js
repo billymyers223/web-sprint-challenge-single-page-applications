@@ -113,7 +113,7 @@ const Home = () => {
     <nav><Link to="/">Home </Link></nav>
     <div class = 'container'>
     <img alt = 'Pizza' src = 'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80'></img>
-    <Link to='/pizza'><button class = 'btn'>Order Pizza</button></Link> 
+    <Link to='/pizza'><button class = 'btn' id ='order-pizza'>Order Pizza</button></Link> 
     </div>
     <h2>Food delivery brought straight to you!</h2>
     <div class = 'cont'>

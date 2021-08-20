@@ -103,8 +103,9 @@ const OrderPizza = () => {
     const newOrder = {
       name: formValues.name,
       size: formValues.size,
-      special: formValues.special,
-      toppings: ['pepperoni', 'sausage', 'mushrooms','bacon'].filter(topping => !!formValues[topping])
+      toppings: ['pepperoni', 'sausage', 'mushrooms','bacon'].filter(topping => !!formValues[topping]),
+      special: formValues.special
+
       // 🔥 STEP 7- WHAT ABOUT HOBBIES?
     }
     console.log(newOrder);
