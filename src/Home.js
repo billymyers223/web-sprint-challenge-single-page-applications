@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
-import { Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const StyledApp = styled.div`
 display:flex;

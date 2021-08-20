@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
-import { Route, Link, Switch } from 'react-router-dom';
 import Form from './Form';
 import schema from './validation/formSchema';
 import * as yup from 'yup';
 import axios from 'axios';
+import { Link} from 'react-router-dom';
+
+
+
 const StyledApp = styled.div`
 display:flex;
 align-items:center;
@@ -50,7 +53,7 @@ const initialFormValues = {
     ///// DROPDOWN /////
     size: '',
     ///// RADIO BUTTONS /////
-    sauce: '',
+
     ///// CHECKBOXES /////
     pepperoni: false,
     sausage: false,
@@ -61,7 +64,6 @@ const initialFormValues = {
   const initialFormErrors = {
     name: '',
     size: '',
-     sauce: '',
 
   }
   const initialDisabled = true
@@ -122,9 +124,11 @@ const OrderPizza = () => {
 
       // 🔥 STEP 7- WHAT ABOUT HOBBIES?
     }
+    postNewOrder(newOrder);
+ 
     console.log(newOrder);
     // 🔥 STEP 8- POST NEW FRIEND USING HELPER
-    postNewOrder(newOrder);
+
   }
 
   useEffect(() => {
