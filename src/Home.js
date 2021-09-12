@@ -26,6 +26,7 @@ nav a{
   font-size:1.5rem;
   border:2px solid black;
   margin:10px;
+  transition:0.5s
 }
 a:hover{
   color:black;
@@ -61,6 +62,7 @@ nav{
   width:30vh;
   font-size:2rem;
   border:5px white solid;
+  transition:0.5s
 }
 
 .container .btn:hover {

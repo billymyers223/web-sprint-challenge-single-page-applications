@@ -21,6 +21,8 @@ label{
     font-size:1.2rem;
     margin:10px;
     
+
+    ++
 }
 button: disabled{
     opacity:50%;
